@@ -8,8 +8,8 @@ project "FreeType"
 	characterset "ASCII"
 	inlining "Auto"
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir ("bin/%{cfg.buildcfg}/%{prj.name}")
+	objdir ("bin-int/%{cfg.buildcfg}/%{prj.name}")
 
 	files {
         "src/autofit/autofit.c",
