@@ -63,7 +63,7 @@ project "FreeType"
 
 	defines {
 		"WIN32",
-		"_DEBUG",
+		"NDEBUG",
 		"_LIB",
 		"_CRT_SECURE_NO_WARNING",
 		"FT2_BUILD_LIBRARY",
@@ -81,3 +81,21 @@ project "FreeType"
 
 	filter "system:windows"
 		systemversion "latest"
+
+	filter "DebugConsole"
+		runtime "Debug"
+		symbols "on"
+	
+	filter "Debug"
+		runtime "Debug"
+		symbols "on"
+
+	filter "ReleaseConsole"
+		runtime "Release"
+		optimize "speed"
+		symbols "off"
+
+	filter "Release"
+		runtime "Release"
+		optimize "speed"
+		symbols "off"
