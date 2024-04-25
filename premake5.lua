@@ -1,7 +1,6 @@
 project "FreeType"
 	kind "StaticLib"
 	language "C"
-    staticruntime "on"
 	warnings "High"
 	optimize "full"
 
